@@ -1,3 +1,7 @@
 # mvc-nodejs
 
-Proyecto NodeJs con estructura MVC, control de errores y validaciones, conexion con BD Docker.
+Proyecto base NodeJs con :
+  Estructura MVC
+  Control de errores
+  Validaciones Zod
+  Conexion con archivo Json.
