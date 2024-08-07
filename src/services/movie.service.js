@@ -29,20 +29,17 @@ export default class movieService {
   }
 
   static async getFilterType({ type }) {
-    console.log("serv type :", type);
     const data = await types.data.find((item) => item.description === type);
 
-    console.log("serv data :", data);
     if (data) {
       const movieTypes = await movies.data.filter(
-        (item) => item.type === data.description
+        (item) => item.type == data.id
       );
       return movieTypes;
-    } else throw "Item exists";
+    } else throw "Not Found";
   }
 
   static async create({ movie }) {
-    console.log("serv movie: ", movie);
     const dataIndex = movies.data.findIndex(
       (item) => item.title === movie.title
     );

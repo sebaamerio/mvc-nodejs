@@ -4,5 +4,5 @@ import { getAll, getById } from "../../controller/type.ctrl.js";
 
 export const typeRoutes = Router();
 
-typeRoutes.get("/all", tryCatchCtrl(getAll));
+typeRoutes.get("/", tryCatchCtrl(getAll));
 typeRoutes.get("/:id", tryCatchCtrl(getById));

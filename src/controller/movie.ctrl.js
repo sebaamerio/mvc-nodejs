@@ -38,7 +38,6 @@ export const getFilterTitle = async (req, res) => {
 export const getFilterType = async (req, res) => {
   const { type } = req.query;
 
-  console.log("ctrl type", type);
   const data = await movieService.getFilterType({ type });
   responseCtrl(res, 200, data);
 };
